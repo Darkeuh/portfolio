@@ -1,0 +1,418 @@
+@font-face {
+  font-family: "DM Mono";
+  src: url("fonts/DMMono-Regular.ttf")
+}
+
+
+@font-face {
+  font-family: "Konkhmer";
+  src: url("fonts/KonkhmerSleokchher-Regular.ttf")
+}
+
+
+@font-face {
+  font-family: "Hammersmith";
+  src: url("fonts/HammersmithOne-Regular.ttf")
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes move-out {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-in;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 80%, rgba(113, 110, 110, 1) 150%);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@layer rays {
+  img {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+  .ease {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    /* Ajustez l'opacité si nécessaire */
+  }
+
+
+
+
+  .img3 {
+    animation: fade3 15s linear infinite;
+    z-index: 1;
+  }
+
+
+  .img2 {
+    mix-blend-mode: screen;
+    animation: fade2 15s linear infinite;
+    z-index: 2;
+  }
+
+
+  .img1 {
+    animation: fade1 15s linear infinite;
+    z-index: 3;
+  }
+
+
+  @keyframes fade3 {
+
+
+    10%,
+    90% {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes fade2 {
+
+
+    20%,
+    97.5% {
+      opacity: 1
+    }
+  }
+
+
+  @keyframes fade1 {
+
+
+    30%,
+    95% {
+      opacity: 1
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@layer logo {
+
+
+  .logo {
+    position: absolute;
+    font-family: "Konkhmer";
+    z-index: 4;
+    width: 40%;
+    top: 0%;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    left: 30px;
+  }
+
+
+  #title {
+    position: relative;
+    color: white;
+    letter-spacing: 8px;
+    font-size: 100px;
+    width: 70%;
+
+    top: 10%;
+    left: 2.5%;
+  }
+
+
+  #name {
+    position: relative;
+    color: rgb(141, 141, 141);
+    font-size: 35px;
+    letter-spacing: 2px;
+    transform: translate(0, -90%);
+    left: 3%;
+    top: 5%;
+    width: 70%;
+  }
+
+
+  .nav {
+    list-style-type: none;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    left: 50%;
+    display: flex;
+    z-index: 10;
+    width: auto;
+    gap: 35%;
+  }
+
+
+  .nav li {
+    flex: 1 1;
+  }
+
+
+  .nav a {
+    letter-spacing: 2px;
+    font-family: "Konkhmer";
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+  }
+
+  .nav a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+  }
+
+
+  .menu-img {
+    /*visibility: hidden;*/
+    position: absolute;
+    z-index: 8;
+    left: 42%;
+    width: 50%;
+    top: -1%;
+    opacity: 0;
+    animation: light 10s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes light {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.6;
+    }
+  }
+
+  .card {
+    top: 60%;
+    left: 67.5%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    z-index: 5;
+  }
+
+.card-inner {
+  position: relative;
+  left: 10%;
+  top: 10%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 10px; /* ✅ ICI LE PADDING */
+  box-sizing: border-box;
+  align-items: center;
+}
+
+
+#card-content {
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-family: 'Konkhmer';
+    color: white;
+}
+
+.card-section {
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: small;
+    color: #9E9E9E;
+    font-family: 'Konkhmer';
+}
+
+#avatar {
+    background-image: url("images/avatar.png");
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    grid-row: span 3;
+    margin-right: 15px;
+}
+
+  .home {
+    position: absolute;
+    left: 87.5%;
+    top: 4%;
+    border-color: white;
+    border: solid 3px;
+    width: 180px;
+    height: 75px;
+    border-radius: 25px;
+    color: white;
+    font-family: "Konkhmer";
+    font-size: larger;
+    background: none;
+  }
+
+  #img1 {
+    position: fixed;
+    /* Fixe l’image pour éviter qu'elle déborde au redimensionnement */
+    top: 75%;
+    left: 87.5%;
+    transform: translate(-50%, -50%);
+    width: min(auto, auto);
+    /* Empêche l’image de dépasser la taille de l’écran */
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  #img2 {
+    position: fixed;
+    left: 38%;
+    top: 27%;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: cover;
+    /* Ajuste l'image sans distorsion */
+    z-index: 3;
+  }
+
+  #img3 {
+    position: fixed;
+    left: 41%;
+    top: 80%;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: cover;
+    /* Ajuste l'image sans distorsion */
+    z-index: 3;
+  }
+
+
+  .proj-list {
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    width: 90%;
+    margin-right: 40px;
+    margin-left: 40px;
+    flex: 1;
+    height: 50%;
+    gap: 30px;
+  }
+
+  .proj1:not(img),
+  .proj2:not(img),
+  .proj3:not(img),
+  .proj4:not(img) {
+    background-color: white;
+    flex: 1;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.61);
+  }
+
+  .proj1 a,
+  .proj2 a,
+  .proj3 a,
+  .proj4 a {
+    width: 100%;
+  }
+
+  .proj1 img,
+  .proj2 img,
+  .proj3 img,
+  .proj4 img {
+    width: 100%;
+    height: 80%;
+  }
+
+  .proj1:hover,
+  .proj2:hover,
+  .proj3:hover,
+  .proj4:hover {
+    transition: 0.9s;
+    box-shadow: 1px 1px rgb(255, 255, 255), 0 0 1.5em rgb(255, 255, 255);
+    transform: scale(1.05);
+  }
+
+}
+
+
+
+@layer rays, logo;
