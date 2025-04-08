@@ -267,6 +267,7 @@
 
 
   .home {
+    margin-right: 10%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -527,6 +528,56 @@
     transform: scale(1.05);
   }
 
+
+
+
+  .skills-list {
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 85%;
+    flex: 1;
+    height: 50%;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .skill1:not(img),
+  .skill2:not(img),
+  .skill3:not(img),
+  .skill4:not(img),
+  .skill5:not(img),
+  .skill6:not(img),
+  .skill7:not(img) {
+    color: white;
+    font-family: "Konkhmer";
+    text-align: center;
+    background-color: transparent;
+    flex: 1;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.61);
+    min-height: 495px;
+  }
+
+  .skills-list h1  {
+    font-size: 20px;
+    text-decoration: underline;
+    padding-bottom: 200px;
+    height: 22%;
+    border-bottom: solid 2px white;
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+  }
+
+  .skills {
+    list-style-type: none;
+    line-height: 5em;
+  }
 }
 
 
