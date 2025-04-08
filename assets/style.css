@@ -63,7 +63,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;}
+  height: 100vh;
+}
 
 
 
@@ -96,7 +97,6 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    /* Ajustez l'opacité si nécessaire */
   }
 
 
@@ -161,7 +161,7 @@
 @layer logo {
 
 
-  .logo {
+  .title {
     position: absolute;
     font-family: "Konkhmer";
     z-index: 4;
@@ -199,59 +199,148 @@
   }
 
 
-  .nav {
-    list-style-type: none;
+
+
+
+
+
+
+  .nav-wrapper {
     position: absolute;
-    text-align: center;
-    top: 5%;
-    left: 50%;
+    left: 40%;
     display: flex;
-    z-index: 10;
-    width: auto;
-    gap: 35%;
+    flex-direction: column;
+    align-items: center;
   }
 
-
-  .nav li {
-    flex: 1 1;
+  .logo {
+    width: 70%;
+    height: auto;
+    animation: fade4 10s linear forwards;
+    z-index: 4;
   }
 
-
-  .nav a {
-    letter-spacing: 2px;
-    font-family: "Konkhmer";
-    color: white;
-    text-decoration: none;
-    font-size: 27px;
-  }
-
-  .nav a:hover {
-    text-decoration: underline;
-    transform: scale(1.2);
-  }
-
-
-  .menu-img {
-    /*visibility: hidden;*/
-    position: absolute;
-    z-index: 8;
-    left: 42%;
-    width: 50%;
-    top: -1%;
-    opacity: 0;
-    animation: light 10s ease-in-out;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes light {
+  @keyframes fade4 {
     0% {
       opacity: 0;
     }
 
+    50% {
+      opacity: 0.5;
+    }
+
     100% {
-      opacity: 0.6;
+      opacity: 1;
     }
   }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav__list {
+    position: sticky;
+    top: 50%;
+    left: 57.5%;
+    transform: translate(0, -180%);
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+  }
+
+  .nav__list li {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__list a {
+    font-family: "Konkhmer", sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+  }
+
+
+  .home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem; /* ESPACE AUTOUR DU TEXTE */
+    border: 5px solid transparent;
+    border-radius: 1.75rem;
+    background: transparent;
+    background-image: 
+      linear-gradient(90deg, black, black), 
+      linear-gradient(90deg, hsl(305, 100%, 51%), hsl(36, 100%, 50%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    box-sizing: border-box;
+    font-family: "Konkhmer", sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
+  
+  .home__label {
+    line-height: 50px;
+    min-width: 150px;
+    padding: 0 0.25em; /* optionnel, un mini espace interne si besoin */
+    background-image: linear-gradient(90deg, hsl(305, 100%, 51%), hsl(36, 100%, 50%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  .home.hidden {
+    visibility: hidden;
+  }
+
+
+
+  .home__label:hover {
+    background-image: linear-gradient(90deg, hsl(0, 0%, 0%), hsl(0, 0%, 0%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  .home:hover {
+    transition: 5s;
+    background: transparent;
+    background-image: linear-gradient(90deg, hsl(36, 100%, 50%), hsl(305, 100%, 51%)),
+      linear-gradient(90deg, hsl(36, 100%, 50%), hsl(305, 100%, 51%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 5px solid transparent;
+    border-radius: 1.75rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .card {
     top: 60%;
@@ -269,35 +358,35 @@
     z-index: 5;
   }
 
-.card-inner {
-  position: relative;
-  left: 10%;
-  top: 10%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  padding: 10px; /* ✅ ICI LE PADDING */
-  box-sizing: border-box;
-  align-items: center;
-}
+  .card-inner {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+  }
 
 
-#card-content {
+  #card-content {
     letter-spacing: 2px;
     font-size: 1.5em;
     font-family: 'Konkhmer';
     color: white;
-}
+  }
 
-.card-section {
+  .card-section {
     align-items: center;
     letter-spacing: 2px;
     font-size: small;
     color: #9E9E9E;
     font-family: 'Konkhmer';
-}
+  }
 
-#avatar {
+  #avatar {
     background-image: url("images/avatar.png");
     width: 200px;
     height: 200px;
@@ -306,22 +395,27 @@
     background-position: center;
     grid-row: span 3;
     margin-right: 15px;
-}
-
-  .home {
-    position: absolute;
-    left: 87.5%;
-    top: 4%;
-    border-color: white;
-    border: solid 3px;
-    width: 180px;
-    height: 75px;
-    border-radius: 25px;
-    color: white;
-    font-family: "Konkhmer";
-    font-size: larger;
-    background: none;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #img1 {
     position: fixed;
@@ -363,14 +457,35 @@
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .proj-list {
     z-index: 5;
     display: flex;
     position: absolute;
     top: 40%;
-    width: 90%;
-    margin-right: 40px;
-    margin-left: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
     flex: 1;
     height: 50%;
     gap: 30px;
@@ -407,7 +522,8 @@
   .proj3:hover,
   .proj4:hover {
     transition: 0.9s;
-    box-shadow: 1px 1px rgb(255, 255, 255), 0 0 1.5em rgb(255, 255, 255);
+    box-shadow: 1px 1px rgb(0, 0, 0), 0 0 1.5em rgb(0, 0, 0);
+    filter: brightness(0.6);
     transform: scale(1.05);
   }
 
