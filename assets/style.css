@@ -53,12 +53,13 @@
   font-family: "Konkhmer";
 }
 
-img{
+img {
   object-fit: contain;
 }
 
 
 :root {
+  scrollbar-color: rgba(128, 128, 128, 0.11) black;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgb(0, 0, 0) 80%, rgba(113, 110, 110, 1) 150%);
   background-position: center;
@@ -68,7 +69,7 @@ img{
   background-attachment: fixed;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   min-height: 100lvh;
@@ -78,13 +79,13 @@ body{
   flex-direction: column;
 }
 
-header{
+header {
   z-index: 100;
   display: flex;
   flex-direction: row;
   height: auto;
   position: sticky;
-  top:0;
+  top: 0;
   min-width: 100%;
   padding: 0px 2%;
   justify-content: space-between;
@@ -200,7 +201,7 @@ header{
     color: white;
     letter-spacing: 8px;
     font-size: 100px;
-    margin:0;
+    margin: 0;
     padding: 0;
     line-height: 1;
   }
@@ -286,12 +287,13 @@ header{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.2rem; /* ESPACE AUTOUR DU TEXTE */
+    padding: 0.5rem 0.2rem;
+    /* ESPACE AUTOUR DU TEXTE */
     border: 5px solid transparent;
     border-radius: 1.75rem;
     background: transparent;
-    background-image: 
-      linear-gradient(90deg, black, black), 
+    background-image:
+      linear-gradient(90deg, black, black),
       linear-gradient(90deg, hsl(305, 100%, 51%), hsl(36, 100%, 50%));
     background-clip: padding-box, border-box;
     background-origin: border-box;
@@ -302,7 +304,7 @@ header{
     text-align: center;
     transition: all 0.2s ease-in-out;
   }
-  
+
   .home__label {
     line-height: 50px;
     min-width: 150px;
@@ -359,29 +361,26 @@ header{
 
 
   .card {
-    top: 60%;
-    left: 67.5%;
+    overflow-x: visible;
+    top: 30%;
+    left: 42.5%;
     width: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
+    height: 55%;
     position: absolute;
-    margin: 100px auto;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
     overflow: hidden;
     z-index: 5;
+    padding: 20px;
   }
 
   .card-inner {
     position: relative;
-    left: 10%;
-    top: 10%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding: 10px;
     box-sizing: border-box;
     align-items: center;
   }
@@ -410,7 +409,7 @@ header{
     background-size: cover;
     background-position: center;
     grid-row: span 3;
-    margin-right: 15px;
+    margin: auto;
   }
 
 
@@ -495,6 +494,7 @@ header{
 
 
   .proj-list {
+    flex-wrap: wrap;
     z-index: 5;
     display: flex;
     position: absolute;
@@ -511,49 +511,52 @@ header{
     transition: 0.9s;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: transparent;
     flex: 1;
     border: 1px solid;
+    border-color: white;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.61);
     min-height: 400px;
     max-height: 400px;
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 250px;
+    max-width: 300px;
     height: 100%;
   }
 
-  .proj-top{
-    object-fit: fill;
+  .proj-top {
     display: flex;
     justify-content: center;
-    height: 50%;
+    height: 70%;
     padding: 0;
     margin: 0;
     width: auto;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
   }
 
-  .proj-top img{
+  #proj img {
+    object-fit: cover;
     width: auto;
-    object-fit: fill;
-    height: 100%;
   }
 
-  .proj-bottom{
+  .proj-bottom {
+    padding: 10%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 30%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(240, 248, 255, 0.24);
+    border-radius: 0 0 20px 20px;
+    backdrop-filter: blur(10px);
   }
 
-  .proj a {
-    width: 100%;
+  .proj-list a {
     text-decoration: none;
-  }
-
-  .proj img {
-    width: 100%;
-    height: 80%;
   }
 
   .proj:hover {
@@ -562,21 +565,20 @@ header{
     transform: scale(1.05);
   }
 
-main{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  padding: 50px 2%;
-}
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 50px 2%;
+  }
 
 
   .skills-list {
     z-index: 9;
     display: flex;
     flex: 1;
-    gap: 5px;
-
+    gap: 1px;
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -593,12 +595,12 @@ main{
     font-family: "Konkhmer";
     text-align: center;
     background-color: transparent;
- 
+
     border: 1px solid white;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.61);
     min-height: 500px;
-    max-width: 500px;
+    max-width: 300px;
     padding: 5px;
   }
 
@@ -612,7 +614,8 @@ main{
     max-height: 100px;
     padding: 20px;
   }
-  .skills-list h1  {
+
+  .skills-list h1 {
     z-index: 9;
     font-size: 20px;
     text-decoration: dashed;
@@ -630,6 +633,86 @@ main{
     line-height: 5em;
     padding: 0;
   }
+
+
+
+  .nom {}
+
+  .contexte {
+    color: white;
+  }
+
+  .contexte p {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .contexte h1 {
+    padding-left: 10%;
+  }
+  
+  .compétences {
+    border: 1px solid white;
+    color: white;
+    margin: 10%;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+  }
+
+  .compétences h1 {
+    text-decoration: underline;
+    padding-left: 10%;
+  }
+
+  #rubrique:not(.comp) {
+    margin-left: 14%;
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .comp {
+    color: rgb(172, 170, 170);
+    font-size: 20px;
+    text-decoration: none;
+    font-style: italic
+  }
+
+
+  .screen {
+    flex-wrap: wrap;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 85%;
+    flex: 1 1;
+    height: 50%;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #shot {
+    margin: 0;
+    padding: 0;
+    transition: 0.9s;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    flex: 1;
+    max-height: 700px;
+    min-width: 500px;
+    max-width: 800px;
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+
+
+
 }
 
 
