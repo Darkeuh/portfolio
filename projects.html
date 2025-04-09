@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/style.css" rel="stylesheet">
   <title>Portfolio</title>
@@ -12,45 +13,56 @@
 
 <body>
 
-
-  <div class="title">
-    <p id="title">Portfolio. </p>
-    <p id="name">Ioané SULASHVILI</p>
-  </div>
-
-
   <div class="container">
     <img class="ease img3" src="assets/images/Group 3.png">
     <img class="ease img2" src="assets/images/Group 2.png">
     <img class="ease img1" src="assets/images/Group 1.png">
   </div>
 
-  <div class="nav-wrapper">
-    <img src="assets/images/Group 4.png" class="logo" />
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a href="about.html">About.</a></li>
-        <li><a href="projects.html">Project.</a></li>
-        <li><a href="contact.html">Contact.</a></li>
-        <li><a href="index.html" class="home"><span class="home__label">Back</span></a></li>
-      </ul>
-    </nav>
-  </div>
-      
-
-
-
-
-    <div class="Projects">
-        <div class="proj-list">
-            <div class="proj1"><a href=""><img id="proj-img" src="">GSB</a></div>
-            <div class="proj2"><a href=""><img id="proj-img" src="">Parej</a></div>
-            <div class="proj3"><a href=""><img id="proj-img" src="">MipihSIB</a></div>
-            <div class="proj4"><a href=""><img id="proj-img" src="">Forma</a></div>
-        </div>
-
-
+  <header>
+    <div class="title">
+      <p id="title">Portfolio.</p>
+      <p id="name">Ioané SULASHVILI</p>
     </div>
+
+    <img class="logo" src="assets/images/Group 4.png" alt="logo" />
+
+    <div class="nav-wrapper">
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="about.html">About.</a></li>
+          <li><a href="#">Project.</a></li>
+          <li><a href="contact.html">Contact.</a></li>
+          <li><a href="index.html" class="home"><span class="home__label">Back</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <div class="Projects">
+      <div class="proj-list">
+        <a href="projects/GSB.html"><div class="proj">
+            <div class="proj-top">
+              <img id="proj-img" src="https://media.istockphoto.com/id/1069539210/fr/photo/coucher-de-soleil-automne-fantastique-du-lac-hintersee.jpg?s=612x612&w=0&k=20&c=bEO1YiSMBcrphxE7zg27ljwjMNZS57KCXw3Z0wUiVtc=">
+            </div>
+            <div class="proj-bottom">
+              GSB
+            </div>
+        </div></a>
+        <div class="proj"><a href="projects/PAREJ.html"><img id="proj-img" src="">Parej</a></div>
+        <div class="proj"><a href="projects/MIPIHSIBSTAGES.html"><img id="proj-img" src="">MipihSIB</a></div>
+        <div class="proj"><a href="projects/FORMA.HTML"><img id="proj-img" src="">Forma</a></div>
+        <div class="proj"><a href="projects/CREATRICESDANTAN.html"><img id="proj-img" src="">Créatrices d'Antan</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
 
 </body>
 
