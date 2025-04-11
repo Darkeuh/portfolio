@@ -91,7 +91,7 @@ header {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.171);
+  background-color: rgba(0, 0, 0, 0.014);
 }
 
 
@@ -194,7 +194,8 @@ header {
     -moz-user-select: -moz-none;
     -ms-user-select: none;
     user-select: none;
-    margin: 0;
+    margin-left: 100px;
+    margin-top: 30px;
   }
 
 
@@ -256,6 +257,7 @@ header {
   }
 
   .nav {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -364,23 +366,27 @@ header {
   .card {
     overflow-x: visible;
     top: 30%;
-    left: 42.5%;
-    width: 50%;
+    left: 25%;
+    width: 40%;
+    margin: 30px;
     height: 55%;
-    position: absolute;
+    position: relative;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
-    overflow: hidden;
     z-index: 5;
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
   }
 
   .card-inner {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 2fr;
     gap: 20px;
     box-sizing: border-box;
     align-items: center;
@@ -403,7 +409,7 @@ header {
   }
 
   #avatar {
-    background-image: url("images/avatar.png");
+    background-image: url("images/projects/avatarr.png");
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -521,7 +527,7 @@ header {
     min-height: 400px;
     max-height: 400px;
     min-width: 250px;
-    max-width: 300px;
+    max-width: 290px;
     height: 100%;
   }
 
@@ -625,6 +631,7 @@ header {
     display: flex;
     justify-content: center;
     min-width: 100px;
+    max-width: 200px;
     padding: 20px;
   }
 
